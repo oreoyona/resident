@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     standalone: true,
@@ -7,6 +7,19 @@ import { Component } from "@angular/core";
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
     title = 'resident';
-  }
+    changeColor() {
+        setTimeout(
+            () => {
+                alert("It worked")
+            }
+            , 5000)
+    }
+
+
+    ngOnInit(): void {
+        this.changeColor();
+    }
+
+}
