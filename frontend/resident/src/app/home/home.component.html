@@ -1,29 +1,43 @@
-<section class="primary-section">
+<section  class="primary-section"  [ngClass]="{'primary-section-p1': page1, 'primary-section-p2': page2, 'primary-section-p3': page3}">
     <section class="primary-section-header">
-        <h1 class="primary-section-text-1">
+        <h1 [ngClass]="{'primary-section-text-1': page1}" *ngIf="page1">
             Apprenez de vos amis stagiaires, comme vous !
+        </h1>
+        <h1 [ngClass]="{'primary-section-text-1-p2': page2}" *ngIf="page2">
+            Nous sommes une communauté, grandissons ensembles
+        </h1>
+        <h1 [ngClass]="{'primary-section-text-1-p3': page3}" *ngIf="page3">
+           Tous pour la science et la science pour tous !
         </h1>
     </section>
 
-    <section class="primary-section-body">
-        <h4>
+    <section [ngClass]="{'primary-section-body': page1, 'primary-section-body-p2': page2}">
+        <h4 *ngIf="page1" class="h4-1">
             Notre philosophie est simple. 
             Nous croyons que la science doit etre partagee pour le bien du plus grand nombre
+        </h4>
+
+        <h4 *ngIf="page2" class="h4-2">
+            Notre philosophie est simple. 
+            Nous croyons que la science doit etre partagée pour le bien du plus grand nombre
+        </h4>
+        <h4 *ngIf="page3" class="h4-3">
+            La science ne se mesure pas à la barbe et ce n'est pas par le menton qu'il est habile.
         </h4>
     </section>
    
     <section class="primary-figures">
         <span class="figure">
-            <span class="circle-1"></span>
+            <span [ngClass]="{'circle-1': page1, 'circle-p2 circle-p2-1': page2}"></span> 
         </span>
         <span class="figure">
-            <span class="figure-1"></span>
+            <span [ngClass]="{'figure-1': page1, 'circle-p2 circle-p2-2': page2}"></span>
         </span>
         <span class="figure">
-            <span class="figure-2"></span>
+            <span [ngClass]="{'figure-2' : page1, 'circle-p2 circle-p2-3': page2}"></span>
         </span>
         <span class="figure">
-            <span class="circle-2"></span>
+            <span [ngClass]="{'circle-2': page1, 'circle-p2 circle-p2-4': page2}"></span>
         </span>
     </section>
    

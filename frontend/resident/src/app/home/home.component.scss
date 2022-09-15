@@ -18,28 +18,55 @@ $point-5: 10vw;
 @media only screen and (min-width: 800px) {
    
   }
+*{
+    transition: all 1s ease-in-out
+}
 
 .primary-section{
-    background-color: $bg-1;
     height: 100vh;
     padding: $point-2 $point-3;
 }
+.primary-section-p1{
+    background-color: $bg-1;
+}
+.primary-section-p2{
+    background-color: $bg-2;
 
+}
+.primary-section-p3{
+    background-color: $bg-3;
+}
 
 h1{
-    color: $bg-2;
     font-family: monospace, "Helvetica Neue", Roboto, sans-serif;
     font-size: 1.7em;
     font-weight: 400;
-    margin: 0 0 $point-2 0 ;
+    margin: 0 0 $point-2 0;
 }
-h4{
+.primary-section-text-1, .primary-section-text-1-p3{
     color: $bg-2;
+   
+}
+.primary-section-text-1-p2{
+    color: $bg-1;
+}
+
+
+
+
+h4{
     font-weight: 300;
     line-height: 1.5em;
-    margin: 0 0 $point-2 0 ;
+    margin: 0 0 $point-3 0 ;
     
 }
+.h4-1{
+    color: $bg-2;
+}
+.h4-2{
+    color: $bg-1;
+}
+
 
 .primary-figures{
     height: 25rem;
@@ -47,7 +74,10 @@ h4{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 20px;
-    
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0 20px;
     
    
     
@@ -56,14 +86,15 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-.circle-1, .circle-2, .figure-1, .figure-2{
+.circle-1, .circle-2, .figure-1, .figure-2, .circle-p2{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.circle-1, .circle-2{
+.circle-1, .circle-2, .circle-p2{
     
     height: $ht-1;
     width: $ht-1;
@@ -75,6 +106,18 @@ h4{
 }
 .circle-1{
     background-color: $bg-3;
+}
+.circle-p2-1{
+    background-color: $bg-4;
+}
+.circle-p2-2{
+    background-color: $bg-3;
+}
+.circle-p2-3{
+    background-color: $bg-5;
+}
+.circle-p2-4{
+    background-color: $bg-1;
 }
 .circle-2{
     background-color: $bg-2;
