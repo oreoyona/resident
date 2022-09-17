@@ -21,14 +21,14 @@ export class LoginComponent{
     /**
      * getStartMessage - return a greeting message
      * Depending on the hour
-     * @param hour The current hour
+     * @param hour The current hour  
      */
     getStartMessage = (hour: number) => {
         hour < 16?  this.startMessage = "Bonjour": this.startMessage = "Bonsoir" 
     }
 
 
-    
+
     constructor(){
         const date = new Date();
         const hour = date.getHours();
