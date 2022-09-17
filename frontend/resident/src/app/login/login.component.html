@@ -1,15 +1,24 @@
-<section class="login-form">
-    <mat-form-field hintLabel="Max 10 characters" appearance="fill">
-      <mat-label>Enter some input</mat-label>
-      <input matInput #input maxlength="10" placeholder="Ex. Nougat">
-      <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
-    </mat-form-field>
-  
-    <mat-form-field appearance="fill">
-      <mat-label>Select me</mat-label>
-      <mat-select>
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
-    </mat-form-field>
+<section class="login-section">
+  <section class="login-section-text">
+    <h1>
+      Re-{{startMessage}} !
+    </h1>
+
+    <h4>
+      Vous nous avez manqué !
+    </h4>
+  </section>
+
+
+  <section class="section-form">
+    <form>
+      <mat-form-field class="form-input" appearance="fill">
+        <mat-label>Votre numéro de télephone</mat-label>
+        <input matInput placeholder="Commencez par +243" type="number">
+      </mat-form-field>
+
+      <button type="submit" class="btn-submit">Connexion</button>
+    </form>
+
+  </section>
 </section>

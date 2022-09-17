@@ -1,0 +1,18 @@
+.login-section, form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.section-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-submit{
+    padding: 5px 70px;
+}
+input{
+    width: 250px;
+}

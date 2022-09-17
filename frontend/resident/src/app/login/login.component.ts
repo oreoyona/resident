@@ -15,6 +15,24 @@ import {MatInputModule} from '@angular/material/input';
     styleUrls: ['login.component.scss']
 })
 export class LoginComponent{
-    title = 'Connectez-vous';
+    startMessage = "Bonjour";
+
+
+    /**
+     * getStartMessage - return a greeting message
+     * Depending on the hour
+     * @param hour The current hour
+     */
+    getStartMessage = (hour: number) => {
+        hour < 16?  this.startMessage = "Bonjour": this.startMessage = "Bonsoir" 
+    }
+
+
+    
+    constructor(){
+        const date = new Date();
+        const hour = date.getHours();
+        this.getStartMessage(hour);
+    }
 
 }
