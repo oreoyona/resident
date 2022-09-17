@@ -57,7 +57,6 @@ h1{
 h4{
     font-weight: 300;
     line-height: 1.5em;
-    margin: 0 0 $point-3 0 ;
     
 }
 .h4-1{
@@ -65,6 +64,39 @@ h4{
 }
 .h4-2{
     color: $bg-1;
+}
+footer{
+    padding-top: 10px;
+}
+
+footer > h4{
+    cursor: pointer;
+    user-select: none;
+}
+
+.footer-page1{
+    color: $bg-2;
+    :hover, :active{
+        color: $bg-5;
+        transition: all .1s ease;
+        text-decoration: underline;
+    }
+}
+.footer-page2{
+    color: $bg-1;
+    :hover, :active{
+        color: inherit;
+        transition: all .1s ease;
+        text-decoration: underline;
+    }
+}
+.footer-page3{
+    color: $bg-2;
+    :hover, :active{
+        color: inherit;
+        transition: all .1s ease;
+        text-decoration: underline;
+    }
 }
 
 

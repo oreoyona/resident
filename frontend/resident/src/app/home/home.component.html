@@ -1,5 +1,5 @@
 <section  class="primary-section"  [ngClass]="{'primary-section-p1': page1, 'primary-section-p2': page2, 'primary-section-p3': page3}">
-    <section class="primary-section-header">
+    <section class="primary-section-header" *ngIf="!showForm">
         <h1 [ngClass]="{'primary-section-text-1': page1}" *ngIf="page1">
             Apprenez de vos amis stagiaires, comme vous !
         </h1>
@@ -23,6 +23,7 @@
         </h4>
         <h4 *ngIf="page3" class="h4-3">
             La science ne se mesure pas à la barbe et ce n'est pas par le menton qu'il est habile.
+            <em>-Molière</em>
         </h4>
     </section>
    
@@ -41,5 +42,9 @@
         </span>
     </section>
    
-
+    <footer *ngIf="onMobile">
+        <h4 [ngClass]="{'footer-page1': page1, 'footer-page2': page2, 'footer-page3': page3}">
+            <a routerLink="/login">{{startMessage}}</a>
+        </h4>
+    </footer>
 </section>
