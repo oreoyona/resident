@@ -16,7 +16,17 @@ $point-5: 10vw;
 // CSS for big screens
 
 @media only screen and (min-width: 800px) {
-   
+   :host{
+    display: grid;
+    grid-template-columns: 60% 40%;
+   }
+
+   .primary-section{
+    grid-column: 1;
+   }
+   .login-component{
+    grid-column: 2;
+   }
   }
 *{
     transition: all 1s ease-in-out

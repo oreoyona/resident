@@ -2,14 +2,15 @@ import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { LoginComponent } from "../login/login.component";
 @Component({
     standalone: true,
     selector: 'home',
     imports: [
         CommonModule, 
         MatFormFieldModule,
-        MatInputModule
-    
+        MatInputModule,  
+        LoginComponent  
     ],
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']

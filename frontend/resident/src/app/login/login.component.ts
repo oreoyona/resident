@@ -14,7 +14,7 @@ import {MatInputModule} from '@angular/material/input';
     templateUrl: 'login.component.html',
     styleUrls: ['login.component.scss']
 })
-class LoginComponent{
+export class LoginComponent{
     title = 'Connectez-vous';
 
 }
