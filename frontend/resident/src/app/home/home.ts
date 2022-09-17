@@ -1,16 +1,13 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
-import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from "../login/login.component";
+import { BreakpointObserver } from "@angular/cdk/layout"
 @Component({
     standalone: true,
     selector: 'home',
     imports: [
-        CommonModule, 
-        MatFormFieldModule,
-        MatInputModule,  
-        LoginComponent  
+        CommonModule,
+        LoginComponent,
     ],
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
@@ -23,6 +20,14 @@ export class HomeComponent implements OnInit {
     page2 = false;
     page3 = false;
     showForm = false;
+
+    /**
+     * changeBreakpoint - change the view according to the breakpoint
+     * @param value : a boolean to check wether we have reached 800px
+     */
+    changeBreakPoint = (value: boolean) => {
+        value? this.onMobile = false: this.onMobile = true;
+    }
 
     /**
      * changeToPage1 - change the value of page1 to true
@@ -55,6 +60,12 @@ export class HomeComponent implements OnInit {
         this.page2 = false;
         this.page3 = true;
         setTimeout(this.changeToPage1, 6000);
+    }
+
+    constructor(public breakpointObserver: BreakpointObserver) {
+        const isLargeScreen = breakpointObserver.isMatched('(min-width: 800px)');
+        this.changeBreakPoint(isLargeScreen);
+
     }
 
 
