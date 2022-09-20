@@ -12,13 +12,24 @@
 
   <section class="section-form">
     <form>
-      <mat-form-field class="form-input" appearance="fill">
+      <mat-form-field class="form-input" appearance="fill" class="email-field">
         <mat-label>Votre numéro de télephone</mat-label>
-        <input matInput placeholder="Commencez par +243" type="number">
+        <input matInput placeholder="example@gmail.com" type="email" name="email">
       </mat-form-field>
 
-      <button type="submit" class="btn-submit">Connexion</button>
+      <mat-form-field class="form-input" appearance="fill" class="password-field">
+        <mat-label>Votre mot de passe</mat-label>
+        <input matInput [type]="visible ? 'text' : 'password'" name="password">
+        <a matSuffix mat-icon-button (click)="changeVisibility()">
+          <mat-icon *ngIf="visible">visibility</mat-icon>
+          <mat-icon *ngIf="!visible">visibility_off</mat-icon>
+        </a>
+        
+      </mat-form-field>
+
+      <button type="submit" class="btn-submit" mat-flat-button color="accent">Connexion</button>
     </form>
+    <p>Pas encore inscrit ? <a href="">Inscrivez-vous</a></p>
 
   </section>
 </section>
