@@ -1,5 +1,5 @@
 <section class="login-section">
-  <section class="login-section-text">
+  <section class="login-section-text" *ngIf="!inscription">
     <h1>
       Re-{{startMessage}} !
     </h1>
@@ -10,7 +10,7 @@
   </section>
 
 
-  <section class="section-form">
+  <section class="section-form" *ngIf="!inscription">
     <form>
       <mat-form-field class="form-input" appearance="fill" class="email-field">
         <mat-label>Votre adresse email</mat-label>
@@ -36,8 +36,8 @@
 
 
 
-  <section class="section-form">
-    <form class="incription-form" *ngIf="inscription">
+  <section class="section-form section-inscription" *ngIf="inscription">
+    <form class="incription-form" >
       <mat-form-field class="form-input" appearance="fill" class="email-field">
         <mat-label>Votre adresse mail</mat-label>
         <input matInput placeholder="example@gmail.com" type="email" name="email">
@@ -70,7 +70,7 @@
 
       <button type="submit" class="btn-submit" mat-flat-button>inscription</button>
     </form>
-    <p>Deja inscrit ? <a href="">Connectez-vous</a></p>
+    <p>Deja inscrit ? <a mat-flat-button (click)="logInscriptionForm()">Connectez-vous</a></p>
 
   </section>
 
