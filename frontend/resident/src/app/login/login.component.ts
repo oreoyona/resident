@@ -25,9 +25,17 @@ export class LoginComponent{
 
     startMessage = "Bonjour";
     visible = false;
+    inscription = false;
 
     /**
-     * changeVisibility - chsnge the visibility of the password
+     * logInscriptionForm - charges the inscription form on the view
+     */
+    logInscriptionForm = () => {
+        this.inscription = !this.inscription;
+    }
+
+    /**
+     * changeVisibility - change the visibility of the password
      */
     changeVisibility() {
         this.visible = !this.visible;

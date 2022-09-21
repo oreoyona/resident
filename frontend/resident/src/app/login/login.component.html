@@ -13,7 +13,7 @@
   <section class="section-form">
     <form>
       <mat-form-field class="form-input" appearance="fill" class="email-field">
-        <mat-label>Votre numéro de télephone</mat-label>
+        <mat-label>Votre adresse email</mat-label>
         <input matInput placeholder="example@gmail.com" type="email" name="email">
       </mat-form-field>
 
@@ -27,9 +27,54 @@
         
       </mat-form-field>
 
-      <button type="submit" class="btn-submit" mat-flat-button color="accent">Connexion</button>
+      <button type="submit" class="btn-submit" mat-flat-button>Connexion</button>
     </form>
-    <p>Pas encore inscrit ? <a href="">Inscrivez-vous</a></p>
+    <p>Pas encore inscrit ? <a mat-flat-button (click)="logInscriptionForm()">Inscrivez-vous</a></p>
 
   </section>
+
+
+
+
+  <section class="section-form">
+    <form class="incription-form" *ngIf="inscription">
+      <mat-form-field class="form-input" appearance="fill" class="email-field">
+        <mat-label>Votre adresse mail</mat-label>
+        <input matInput placeholder="example@gmail.com" type="email" name="email">
+      </mat-form-field>
+
+      <mat-form-field class="form-input" appearance="fill" class="email-field">
+        <mat-label>Votre nom</mat-label>
+        <input matInput placeholder="Jiresse" type="email" name="nom">
+      </mat-form-field>
+
+      <mat-form-field class="form-input" appearance="fill" class="password-field">
+        <mat-label>Votre mot de passe</mat-label>
+        <input matInput [type]="visible ? 'text' : 'password'" name="password">
+        <a matSuffix mat-icon-button (click)="changeVisibility()">
+          <mat-icon *ngIf="visible">visibility</mat-icon>
+          <mat-icon *ngIf="!visible">visibility_off</mat-icon>
+        </a>
+        
+      </mat-form-field>
+
+      <mat-form-field class="form-input" appearance="fill" class="password-field">
+        <mat-label>Confirmez votre mot de passe</mat-label>
+        <input matInput [type]="visible ? 'text' : 'password'" name="password2">
+        <a matSuffix mat-icon-button (click)="changeVisibility()">
+          <mat-icon *ngIf="visible">visibility</mat-icon>
+          <mat-icon *ngIf="!visible">visibility_off</mat-icon>
+        </a>
+        
+      </mat-form-field>
+
+      <button type="submit" class="btn-submit" mat-flat-button>inscription</button>
+    </form>
+    <p>Deja inscrit ? <a href="">Connectez-vous</a></p>
+
+  </section>
+
+
+
+
 </section>
