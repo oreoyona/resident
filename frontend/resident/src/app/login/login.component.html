@@ -11,15 +11,15 @@
 
 
   <section class="section-form" *ngIf="!inscription">
-    <form>
+    <form [formGroup]="connexionForm" (ngSubmit)="connexion(connexionForm.value)">
       <mat-form-field class="form-input" appearance="fill" class="email-field">
         <mat-label>Votre adresse email</mat-label>
-        <input matInput placeholder="example@gmail.com" type="email" name="email">
+        <input matInput placeholder="example@gmail.com" type="email" name="email" formControlName="email">
       </mat-form-field>
 
       <mat-form-field class="form-input" appearance="fill" class="password-field">
         <mat-label>Votre mot de passe</mat-label>
-        <input matInput [type]="visible ? 'text' : 'password'" name="password">
+        <input matInput [type]="visible ? 'text' : 'password'" name="password" formControlName="password">
         <a matSuffix mat-icon-button (click)="changeVisibility()">
           <mat-icon *ngIf="visible">visibility</mat-icon>
           <mat-icon *ngIf="!visible">visibility_off</mat-icon>
@@ -37,36 +37,42 @@
 
 
   <section class="section-form section-inscription" *ngIf="inscription">
-    <form class="incription-form" >
+    <form class="incription-form" [formGroup]="inscriptionForm" (ngSubmit)="newUser(inscriptionForm.value)">
       <mat-form-field class="form-input" appearance="fill" class="email-field">
         <mat-label>Votre adresse mail</mat-label>
-        <input matInput placeholder="example@gmail.com" type="email" name="email">
+        <input 
+        matInput 
+        placeholder="example@gmail.com" 
+        type="email" name="email" formControlName="email" >
       </mat-form-field>
 
       <mat-form-field class="form-input" appearance="fill" class="email-field">
         <mat-label>Votre nom</mat-label>
-        <input matInput placeholder="Jiresse" type="email" name="nom">
+        <input matInput placeholder="Jiresse" type="email" name="nom" formControlName="nom">
       </mat-form-field>
-
-      <mat-form-field class="form-input" appearance="fill" class="password-field">
-        <mat-label>Votre mot de passe</mat-label>
-        <input matInput [type]="visible ? 'text' : 'password'" name="password">
-        <a matSuffix mat-icon-button (click)="changeVisibility()">
-          <mat-icon *ngIf="visible">visibility</mat-icon>
-          <mat-icon *ngIf="!visible">visibility_off</mat-icon>
-        </a>
+      <section class="section-form" formGroupName="mdp">
         
-      </mat-form-field>
+        <mat-form-field class="form-input" appearance="fill" class="password-field">
+          <mat-label>Votre mot de passe</mat-label>
+          <input matInput [type]="visible ? 'text' : 'password'" name="password" formControlName="password">
+          <a matSuffix mat-icon-button (click)="changeVisibility()">
+            <mat-icon *ngIf="visible">visibility</mat-icon>
+            <mat-icon *ngIf="!visible">visibility_off</mat-icon>
+          </a>
+          
+        </mat-form-field>
+  
+        <mat-form-field class="form-input" appearance="fill" class="password-field">
+          <mat-label>Confirmez votre mot de passe</mat-label>
+          <input matInput [type]="visible ? 'text' : 'password'" name="password2"  formControlName="password2">
+          <a matSuffix mat-icon-button (click)="changeVisibility()">
+            <mat-icon *ngIf="visible">visibility</mat-icon>
+            <mat-icon *ngIf="!visible">visibility_off</mat-icon>
+          </a>
+          
+        </mat-form-field>
+      </section>
 
-      <mat-form-field class="form-input" appearance="fill" class="password-field">
-        <mat-label>Confirmez votre mot de passe</mat-label>
-        <input matInput [type]="visible ? 'text' : 'password'" name="password2">
-        <a matSuffix mat-icon-button (click)="changeVisibility()">
-          <mat-icon *ngIf="visible">visibility</mat-icon>
-          <mat-icon *ngIf="!visible">visibility_off</mat-icon>
-        </a>
-        
-      </mat-form-field>
 
       <button type="submit" class="btn-submit" mat-flat-button>inscription</button>
     </form>
