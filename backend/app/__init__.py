@@ -3,15 +3,14 @@ from flask import Flask, request, jsonify, abort, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import mimetypes
+from models import setup_db
+
 mimetypes.add_type('application/javascript', '.js')
 mimetypes.add_type('text/css', '.css')
 
 def create_app(config=None):
-    app = Flask(__name__, 
-                static_url_path='', 
-                static_folder='templates/static', 
-                template_folder='templates')
-    
+    app = Flask(__name__, static_url_path='', static_folder='templates/static', template_folder='templates')
+    setup_db(app)
     cors = CORS(app, resources = {r"/api/*": {"origins": "*"}})
     
     
