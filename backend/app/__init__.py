@@ -4,7 +4,15 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import mimetypes
 from models import setup_db
+from flask_login import LoginManager
+from . import auth
 
+
+
+
+
+login_manager = LoginManager()
+login_manager.login_view(auth.login)
 mimetypes.add_type('application/javascript', '.js')
 mimetypes.add_type('text/css', '.css')
 
@@ -12,6 +20,8 @@ def create_app(config=None):
     app = Flask(__name__, static_url_path='', static_folder='templates/static', template_folder='templates')
     setup_db(app)
     cors = CORS(app, resources = {r"/api/*": {"origins": "*"}})
+    
+    login_manager.init_app(app)
     
     
     @app.after_request
