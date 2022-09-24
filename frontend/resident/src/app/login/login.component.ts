@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { AuthService } from "../common/services/auth.service";
 
 @Component({
     standalone: true,
@@ -17,7 +18,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
         MatButtonModule,
         MatIconModule,
         CommonModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
     ],
     templateUrl: 'login.component.html',
     styleUrls: ['login.component.scss']
@@ -46,12 +47,23 @@ export class LoginComponent {
         )
     });
 
-
+    /**
+     * newUser - register a new user to the application
+     * @param value : the infromations about the new user 
+     */
     newUser = (value: any) =>{
-        
+        console.log(value)
     }
 
+    
+    /**
+     * - connexion: makes an HTTP request to login the user
+     * @value : the object containg the credentials of the user
+     */
     connexion = (value: any) => {
+        this.auth.login(value).subscribe( res => {
+            console.log(res)
+        })
      
     }
 
@@ -81,7 +93,7 @@ export class LoginComponent {
 
 
 
-    constructor() {
+    constructor(private auth: AuthService) {
         const date = new Date();
         const hour = date.getHours();
         this.getStartMessage(hour);
