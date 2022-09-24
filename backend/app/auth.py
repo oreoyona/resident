@@ -4,8 +4,10 @@ from models import Interne
 from werkzeug.security import check_password_hash, generate_password_hash
 
 
-# ####################################################################################
-# Config for the /auth endpoint                                                      #
+######################################################################################
+##                                                                                  ##
+## Config for the /auth endpoint                                                    ##
+##                                                                                  ##
 ######################################################################################
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
