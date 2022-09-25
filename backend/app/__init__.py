@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, abort, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import mimetypes
-from models import setup_db
+from models import Interne, setup_db
 from flask_login import LoginManager
 from . import auth
 
@@ -12,7 +12,12 @@ from . import auth
 
 
 login_manager = LoginManager()
-login_manager.login_view(auth.login)
+# login_manager.login_view(auth.login())
+
+@login_manager.user_loader
+def load_user(user_id):
+    return Interne.query.get(int(user_id))
+
 mimetypes.add_type('application/javascript', '.js')
 mimetypes.add_type('text/css', '.css')
 

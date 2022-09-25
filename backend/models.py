@@ -2,8 +2,6 @@ import os
 from sqlalchemy import Column, String, Integer
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
-from . import login_manager
-
 
 
 DB_HOST = os.getenv('DB_HOST', 'localhost:5432')
@@ -29,7 +27,7 @@ class Interne(UserMixin, db.Model):
     id = Column(Integer, primary_key = True)
     name = Column(String(64))
     email = Column(String(64), unique=True, index=True)
-    promotion = Column(String, (4))
+    promotion = Column(String(4))
     biographie = Column(String(128))
     password = Column(String(128))
     
@@ -65,6 +63,3 @@ class Interne(UserMixin, db.Model):
     def password():
         raise AttributeError('Password is not a readable attribute')
     
-@login_manager.user_loader
-def load_user(user_id):
-        return Interne.query.get(int(user_id))
