@@ -1,16 +1,10 @@
-import functools
-from flask import Blueprint, g, redirect, render_template, request, session, jsonify, abort
-from models import Interne
+from flask import render_template, request, session, jsonify, abort
 from werkzeug.security import check_password_hash, generate_password_hash
 
+from flask import render_template
+from . import auth
 
-######################################################################################
-##                                                                                  ##
-## Config for the /auth endpoint                                                    ##
-##                                                                                  ##
-######################################################################################
 
-bp = Blueprint('auth', __name__, url_prefix='/auth')
 onSuccess = {
     "success": True,
     "message": 'OK'
@@ -21,8 +15,8 @@ onFailure = {
     "message": 'Error',
     }
 
-
-@bp.route('/login', methods=['GET','POST'])
+from ..models import Interne
+@auth.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         data = request.json
@@ -42,7 +36,7 @@ def login():
     
 
 
-@bp.route('/register', methods=['POST'])
+@auth.route('/register', methods=['POST'])
 def register():
     data = request.json
     try:

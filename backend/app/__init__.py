@@ -1,26 +1,27 @@
-import os
-from flask import Flask, request, jsonify, abort, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 from flask_cors import CORS
 import mimetypes
-from models import Interne, setup_db
-from flask_login import LoginManager
-from . import auth
 
 
 
 
 
-login_manager = LoginManager()
-# login_manager.login_view(auth.login())
+################################################################################################
+## the code below is import for the initialization of the app                               ####
+################################################################################################
 
-@login_manager.user_loader
-def load_user(user_id):
-    return Interne.query.get(int(user_id))
-
+#the code below allows the js in our index.html file to be read properly
 mimetypes.add_type('application/javascript', '.js')
 mimetypes.add_type('text/css', '.css')
 
+################################################################################################
+from flask_login import LoginManager
+login_manager = LoginManager()
+login_manager.login_view = 'auth.login'
+
+
+
+from .models import setup_db
 def create_app(config=None):
     app = Flask(__name__, static_url_path='', static_folder='templates/static', template_folder='templates')
     setup_db(app)
@@ -42,12 +43,11 @@ def create_app(config=None):
         )
         
         return response
-    from . import auth
-    app.register_blueprint(auth.bp)
+    from .auth import auth as auth_blueprint 
+    app.register_blueprint(auth_blueprint, url_prefix='/auth')
+
     
-    @app.route('/')
-    def index():
-        return render_template("static/index.html")
+   
     return app
     
     

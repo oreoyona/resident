@@ -4,6 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 
 
+
+
+
+
+
+
 DB_HOST = os.getenv('DB_HOST', 'localhost:5432')
 DB_USER = os.getenv('DB_USER', 'postgres')
 DB_PASSWORD = os.getenv('DB_PASSWORD', '1234')
@@ -63,3 +69,8 @@ class Interne(UserMixin, db.Model):
     def password():
         raise AttributeError('Password is not a readable attribute')
     
+from . import login_manager
+## login_manager is required for flask-login to work
+@login_manager.user_loader
+def load_user(user_id):
+    return Interne.query.get(int(user_id))

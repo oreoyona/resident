@@ -7,7 +7,7 @@ from flask import Blueprint
 ##                                                                                  ##
 ######################################################################################
 
-profil = Blueprint('me', __name__, url_prefix='/')
+auth = Blueprint('auth', __name__, url_prefix='/auth')
 
 from . import views
 
