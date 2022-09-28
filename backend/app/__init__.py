@@ -1,3 +1,4 @@
+import profile
 from flask import Flask
 from flask_cors import CORS
 import mimetypes
@@ -44,8 +45,11 @@ def create_app(config=None):
         
         return response
     from .auth import auth as auth_blueprint 
+    from .main import profil as profile_blueprint
+    from .main import index as home_blueprint
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
-
+    app.register_blueprint(profile_blueprint, url_prefix='/me')
+    app.register_blueprint(home_blueprint, url_prefix='/')
     
    
     return app
