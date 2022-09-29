@@ -33,7 +33,7 @@ $resident-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($resident-theme);
 
-*{
+*:not(.login-section){
   margin: 0;
   padding: 0;
   overflow: hidden;

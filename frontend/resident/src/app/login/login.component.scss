@@ -24,13 +24,13 @@ p{
 }
 .section-form{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 
 .email-field, .password-field, button{
     width: 250px;
+    margin: 20px 0 0 0;
 
 }
 .btn-submit{
@@ -52,4 +52,16 @@ h4{
 
 .section-inscription{
    margin-top: 20vh;
+}
+
+.remember-me{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+.remember-me-mat{
+    font-family: monospace, "Helvetica Neue", Roboto, sans-serif;
 }

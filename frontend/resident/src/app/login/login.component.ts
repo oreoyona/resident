@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { AuthService } from "../common/services/auth.service";
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 @Component({
     standalone: true,
@@ -19,6 +20,7 @@ import { AuthService } from "../common/services/auth.service";
         MatIconModule,
         CommonModule,
         ReactiveFormsModule,
+        MatCheckboxModule
     ],
     templateUrl: 'login.component.html',
     styleUrls: ['login.component.scss']

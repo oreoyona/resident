@@ -29,12 +29,12 @@ $point-5: 10vw;
    }
   }
 *{
-    transition: all 1s ease-in-out
+    transition: all 1s ease-in-out;
 }
 
 .primary-section{
     height: 100vh;
-    padding: $point-2 $point-3;
+    padding: $point-2 2em;
 }
 .primary-section-p1{
     background-color: $bg-1;
@@ -111,15 +111,15 @@ footer > h4{
 
 
 .primary-figures{
-    height: 25rem;
+    height: 20rem;
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 20px;
+    gap: 20px 10px;
     justify-content: center;
     align-items: center;
     justify-items: center;
-    padding: 0 20px;
+    padding: 20px;
     
    
     
