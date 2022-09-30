@@ -6,7 +6,7 @@ h1, h4{
     font-weight: 400;
 }
 
-p{
+p, .remember-me{
     font-weight: 200;
     font-size: 0.9em;
     margin: 15px 0;
@@ -60,8 +60,4 @@ h4{
     justify-content: flex-start;
     align-items: center;
     margin: 20px 0 0 0;
-}
-
-.remember-me-mat{
-    font-family: monospace, "Helvetica Neue", Roboto, sans-serif;
 }
