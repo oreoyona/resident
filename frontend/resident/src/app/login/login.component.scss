@@ -24,9 +24,17 @@ p, .remember-me{
 }
 .section-form{
     display: flex;
-    justify-content: flex-start;
 }
 
+.form-input{
+    justify-content: center;
+    align-items: center;
+}
+
+.remember-me{
+    justify-content: left;
+    align-items: flex-start;
+}
 
 .email-field, .password-field, button{
     width: 250px;

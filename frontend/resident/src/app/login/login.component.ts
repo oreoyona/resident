@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, OnDestroy } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { AuthService } from "../common/services/auth.service";
 import { MatCheckboxModule } from '@angular/material/checkbox'
@@ -25,7 +26,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
     templateUrl: 'login.component.html',
     styleUrls: ['login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnDestroy{
 
 
     startMessage = "Bonjour";
@@ -99,6 +100,11 @@ export class LoginComponent {
         const date = new Date();
         const hour = date.getHours();
         this.getStartMessage(hour);
+    }
+
+
+    ngOnDestroy(){
+        
     }
 
 }
