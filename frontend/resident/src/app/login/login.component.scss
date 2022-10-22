@@ -1,6 +1,7 @@
 $bg-1: #F6F5EE;
 $bg-4: #EA7E4A;
 
+
 h1, h4{
     font-family: monospace, "Helvetica Neue", Roboto, sans-serif;
     font-weight: 400;
@@ -14,6 +15,7 @@ p, .remember-me{
 :host{
     height: 100%;
     background-color: $bg-1;
+    grid-column: 1/-1;
 }
 .login-section, .section-form, form{
     display: flex;

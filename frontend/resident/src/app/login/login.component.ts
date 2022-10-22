@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { AuthService } from "../common/services/auth.service";
-import { MatCheckboxModule } from '@angular/material/checkbox'
 
 @Component({
     standalone: true,
