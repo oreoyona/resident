@@ -14,12 +14,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HeaderComponent } from './common/components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     NotFoundComponent,
+    HeaderComponent,
     
   ],
   imports: [

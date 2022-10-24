@@ -1,0 +1,39 @@
+<header>
+    <section class="logo">
+        <img [src]="logo_principal" alt="">
+    </section>
+    <nav>
+        <section>
+            <a href="">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                Acceuil
+            </a>
+            <a href="">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="chat_bubble_outline"></mat-icon>
+
+                Messages
+            </a>
+            <a href="">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="whatshot"></mat-icon>
+                Decouvrir</a>
+        </section>
+    </nav>
+
+    <section class="profile-notifications-section">
+        <div class="notification-div">
+            <a href="">
+                Notifications
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="notifications_none"></mat-icon>
+            </a>                  
+            <span>
+                {{notificationCounter}}
+            </span>
+        </div>
+
+        <div class="profile-div">
+            <div class="profile-img">
+                <img [src]="profile1" alt="">
+            </div>
+        </div>
+    </section>
+</header>
