@@ -3,7 +3,6 @@
 }
 .logo{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -11,25 +10,26 @@ header {
     height: 15vh;
     width: 100%;
     padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
 }
 
 nav{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-a{
-
-    text-decoration: none;
-    padding: 0 10px;
+button{
+    padding: 0 50px;
 }
 
 .profile-notifications-section{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding-right: 40px;
+
 }
 
 .profile-div, .notification-div{
