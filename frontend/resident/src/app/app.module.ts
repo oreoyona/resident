@@ -16,6 +16,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './common/components/header/header.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

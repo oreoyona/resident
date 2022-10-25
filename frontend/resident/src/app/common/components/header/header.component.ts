@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls:['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  currentUser = 'Jemima Kasongo'
   notificationCounter = 7;
   logo_principal = './assets/logo_principal.svg';
   profile1 = './assets/profile1.jpg';
