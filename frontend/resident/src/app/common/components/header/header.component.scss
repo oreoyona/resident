@@ -1,4 +1,23 @@
 @import '../../../color';
+@media only screen and (max-width: 800px) {
+    header{
+        display: flex !important;
+        justify-content: space-around !important;
+    }
+   .icon-label{
+    display: none !important;
+   }
+   .plus_btn{
+    display: block !important;
+   }
+   .profile-section{
+    display: none !important;
+   }
+   .logo{
+    display: none !important;
+   }
+
+}
 :host{
     background-color: white;
     padding: 20px;

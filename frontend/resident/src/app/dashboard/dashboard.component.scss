@@ -3,6 +3,11 @@
   .grid-container{
     overflow: hidden !important;
   }
+
+  .main-header{
+   display: flex !important;
+
+  }
   main{
     grid-column: 1/-1 !important;
     padding: 0 10px !important;
