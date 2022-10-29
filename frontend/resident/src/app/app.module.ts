@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './common/components/header/header.component';
-
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { HeaderComponent } from './common/components/header/header.component';
     DashboardComponent,
     NotFoundComponent,
     HeaderComponent,
+    
     
   ],
   imports: [
@@ -37,6 +38,7 @@ import { HeaderComponent } from './common/components/header/header.component';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
+    NgOptimizedImage
     
   ],
   providers: [],
