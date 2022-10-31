@@ -2,26 +2,53 @@
 @media only screen and (max-width: 800px) {
   .grid-container{
     display: flex !important;
+    background-color: white !important;
+    
   }
 
   .main-header{
    display: flex !important;
    position: fixed;
-   bottom: 0px;
+   bottom: -1px;
    z-index: 2;
    width: 100vw;
+   margin-bottom: 0 !important;
 
   }
   main{
     grid-column: 1/-1 !important;
     padding: 0 10px !important;
     align-items: center !important;
+    
+  }
+  .main-body{
+    align-items: center !important;
+    background-color: white !important;
   }
 
   .post-card{
-    width: 95% !important;
+    margin-top: 20px !important;
+    width: 90% !important;
+    box-shadow: none !important;
 
   }
+
+  .image{
+    border: 1px solid transparent;
+    border-radius: 12px;
+    > img{
+      height: 100% !important;
+    }
+  }
+
+    .profile_options{
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      position: absolute !important;
+      right: 0 !important;
+     }
+  
 }
 
 :host{
