@@ -10,5 +10,6 @@ export interface Post{
     hopital_id: number,
     like_count: number,
     comment_count: number,
-    post_picture: string
+    post_picture: string,
+    post_picture_alt?: string
 }

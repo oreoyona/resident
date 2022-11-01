@@ -13,6 +13,7 @@
    z-index: 2;
    width: 100vw;
    margin-bottom: 0 !important;
+   border-top: 1px solid $bg-1;
 
   }
   main{
@@ -28,7 +29,7 @@
 
   .post-card{
     margin-top: 20px !important;
-    width: 90% !important;
+    width: 80% !important;
     box-shadow: none !important;
 
   }
@@ -47,6 +48,7 @@
       align-items: center;
       position: absolute !important;
       right: 0 !important;
+     
      }
   
 }
@@ -118,4 +120,33 @@ button{
   :hover{
     color: blue;
   }
+}
+
+.whatsup{
+  padding: 10px;
+  height: 180px;
+  width: 100%;
+  margin: 10px 5px 40px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  
+  mat-card-header{
+    display: flex !important;
+    padding: 10px 0 !important;
+    align-items: center;
+    > div{
+      display: flex;
+      align-items: center;
+    }
+    mat-form-field{
+      width: 80%;
+    }
+  }
+}
+
+input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
