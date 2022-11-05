@@ -84,7 +84,7 @@ main{
 }
 
 .post-card {
-  width: 100%;
+  width: auto;
   border-radius: 10px;
   margin-bottom: 10px;
   > *{
@@ -120,33 +120,4 @@ button{
   :hover{
     color: blue;
   }
-}
-
-.whatsup{
-  padding: 10px;
-  height: 180px;
-  width: 100%;
-  margin: 10px 5px 40px;
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  
-  mat-card-header{
-    display: flex !important;
-    padding: 10px 0 !important;
-    align-items: center;
-    > div{
-      display: flex;
-      align-items: center;
-    }
-    mat-form-field{
-      width: 80%;
-    }
-  }
-}
-
-input{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

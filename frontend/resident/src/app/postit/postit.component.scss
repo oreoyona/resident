@@ -1,0 +1,34 @@
+
+.whatsup{
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+    display: flex;
+    margin: 10px 0 20px 0;
+    border-radius: 10px;
+  }
+  
+  .post_it{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    mat-form-field{
+      transform: translateY(6px);
+      width: 95%;
+      input{
+        border-radius: 45px !important;
+      }
+    }
+  
+  }
+  .profile_picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    img{
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+    }
+  }
