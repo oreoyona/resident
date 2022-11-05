@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { HeaderComponent } from '../common/components/header/header.component';
 import { PostitComponent } from '../postit/postit.component';
+import {MatDividerModule} from '@angular/material/divider';
 @NgModule({
     imports: [
         CommonModule,
@@ -25,6 +26,7 @@ import { PostitComponent } from '../postit/postit.component';
         LayoutModule,
         NgOptimizedImage,
         MatInputModule,
+        MatDividerModule
 
 
     ],

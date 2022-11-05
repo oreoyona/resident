@@ -1,9 +1,8 @@
 <section class="grid-container">
   <app-header class="main-header"></app-header>
-
   <main>
     <section class="main-body">
-      <app-postit></app-postit>
+      <app-postit class="pc-postit"></app-postit>
       <ng-container *ngFor="let datum of posts">
         <mat-card class="post-card">
           <mat-card-header>
@@ -42,14 +41,8 @@
             </button>
           </mat-card-actions>
         </mat-card>
-
       </ng-container>
     </section>
-
   </main>
-
-  <footer>
-
-  </footer>
-
 </section>
+<footer></footer>

@@ -1,12 +1,25 @@
 <section class="whatsup">
+  <div class="post_it">
     <div class="profile_picture">
       <img src="./assets/profile1.jpg" alt="">
     </div>
-    <div class="post_it">
-      <mat-form-field appearance="outline">
-        <mat-label>A quoi pensez-vous?</mat-label>
-        <input matInput>
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      </mat-form-field>
-    </div>
+    <mat-form-field appearance="outline">
+      <mat-label>A quoi pensez-vous?</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </div>
+  <mat-divider></mat-divider>
+  <section class="options">
+    <nav>
+      <button mat-flat-button>
+        <mat-icon class="image-btn"> insert_photo</mat-icon>
+        image
+      </button>
+      <button mat-flat-button>
+        <mat-icon class="video-btn">movie_creation</mat-icon>
+        Video
+      </button>
+    </nav>
   </section>
+</section>

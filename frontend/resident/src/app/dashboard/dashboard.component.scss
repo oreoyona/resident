@@ -1,5 +1,8 @@
 @import '../color';
 @media only screen and (max-width: 800px) {
+  .pc-postit{
+    display: none !important;
+  }
   .grid-container{
     display: flex !important;
     background-color: white !important;
@@ -64,7 +67,7 @@
   background-color: $bg-1;
 }
 .main-header{
-  height: 10vh;
+  min-height: 10vh;
   grid-column: 1/-1;
   margin-bottom: 20px;
   padding: 0 15px;
