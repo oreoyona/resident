@@ -16,11 +16,13 @@ import { MatInputModule} from '@angular/material/input';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgOptimizedImage } from '@angular/common';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
+    ProfileComponent,
     
     
   ],
