@@ -40,7 +40,9 @@
 
 
   <section class="section-form section-inscription" *ngIf="inscription">
-    <form class="incription-form" [formGroup]="inscriptionForm" (ngSubmit)="newUser(inscriptionForm.value)">
+    <form class="incription-form" 
+    [formGroup]="inscriptionForm" 
+    (ngSubmit)="newUser(inscriptionForm.value)">
       <mat-form-field class="form-input" appearance="fill" class="email-field">
         <mat-label>Votre adresse mail</mat-label>
         <input 

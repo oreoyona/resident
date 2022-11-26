@@ -78,6 +78,8 @@
 main{
   
   grid-column: 4/9;
+  width: 95%;
+  margin: auto;
 
   .main-body{
     background-color: $bg-1;
