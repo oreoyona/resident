@@ -1,5 +1,8 @@
 @import '../color';
 @media only screen and (max-width: 800px) {
+  .left, .right{
+    display: none !important;
+  }
   .pc-postit{
     display: none !important;
   }
@@ -60,7 +63,13 @@
   height: 100%;
   
 }
-
+.right{
+  grid-column: 9/-1;
+  padding: 5px;
+  background-color: #ffffff;
+  margin: 10px 20px 0 0;
+  border-radius: 10px;
+}
 .left{
   grid-column: 1/4;
   padding: 5px;
