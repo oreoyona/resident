@@ -35,7 +35,7 @@
 
 
 :host{
-    background-color: white;
+    background-color: $bg-10;
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -64,11 +64,14 @@ button{
     padding: 0 20px;
     margin: 0 10px;
     border-radius: 15px;
+    background-color: $bg-2;
+    color: white;
 }
 
 .profile-section{
     display: flex;
     justify-content: flex-start;
+    color: white;
 }
 
 .profile-div, .notification-div{
@@ -102,6 +105,6 @@ button{
 }
 
 mat-icon{
-    color: $bg-8;
+    color: white;
     padding: 0 4px;
 }

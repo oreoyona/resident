@@ -11,5 +11,5 @@ export interface Post{
     like_count: number,
     comment_count: number,
     post_picture: string,
-    post_picture_alt?: string
+    post_picture_alt?: string,
 }
